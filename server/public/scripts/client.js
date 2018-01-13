@@ -6,14 +6,12 @@ $(document).ready(onReady);
 
 function onReady () {
     getTask();
-    // $('select').hide();
     $('.addTaskBtn').on('click', addTask);
     $('#taskList').on('click', '.close', deleteTasks);
     $('#taskList').on('click', 'li', check);
     $('#taskList').on('click', 'li', completeTasks);
-    // $('selected').on('', categorySelected);
 }
-//posting tasks to server 
+
 function addTask () {
     // object to send to server
     const newTask = {
@@ -31,7 +29,7 @@ function addTask () {
         }
     });
 }
-// getting tasks from server.
+
 function getTask () {
     console.log('addTask clicked');
     $.ajax({
@@ -52,6 +50,8 @@ function appendTasks (taskArray) {
         $('#taskList').prepend($row);
     }
 }
+// this toggles a class to li when clicked and
+// sends a Y or a N;
 function check () {
     $(this).toggleClass('checked');
     if($(this).hasClass('checked'))  {
@@ -59,15 +59,17 @@ function check () {
     } else {
         checked = 'N';
     }
+    console.log(checked);
 }
 
+// sends updated information to server/database.
 function completeTasks () {
     let id = $(this).data('id');
-    check;
+    check;// call the check function here to update the database.
     $.ajax({
         method: "PUT",
         url: "/tasks/" + id,
-        data: {completed: checked},
+        data: {taskFinished: checked},
         success: function (response) {
             console.log('successful PUT response: ', response);
         }
@@ -85,7 +87,3 @@ function deleteTasks() {
         }
     });
 }
-
-// function categorySelected () {
-//     $('selected').hide();
-// }

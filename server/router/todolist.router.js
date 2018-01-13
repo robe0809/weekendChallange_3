@@ -47,7 +47,7 @@ router.delete('/:id', (req, res) => {
 // then uncomplete which will start the database back to it's original state
 router.put('/:id', (req, res) => {
     const queryText =  `UPDATE tasks SET complete = $1 WHERE id = $2;`
-    pool.query(queryText, [req.body.completed, req.params.id])
+    pool.query(queryText, [req.body.taskFinished, req.params.id])
     .then((result) => {
         console.log('put result: ', result);
         res.send(201);
