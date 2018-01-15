@@ -90,7 +90,7 @@ function updateCompleted () {
     })
 }
 
-// DELETES all tasks from the DOM and Database.
+// DELETES tasks from the DOM and Database.
 function deleteTasks() {
     let id = $(this).parent().data('id');
     $(this).parent().remove();
