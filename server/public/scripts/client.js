@@ -85,6 +85,7 @@ function updateCompleted () {
         data: {taskFinished: checked},
         success: function (response) {
             console.log('successful PUT', response);
+            completed;
         }
     })
 }
