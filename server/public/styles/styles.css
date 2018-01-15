@@ -2,18 +2,16 @@ body {
     margin: 0;
     min-width: 250px;
   }
-  /* Include the padding and border in an element's total width and height */
+
   * {
     box-sizing: border-box;
   }
   
-  /* Remove margins and padding from the list */
   ul {
     margin: 0;
     padding: 0;
   }
   
-  /* Style the list items */
   ul li {
     cursor: pointer;
     position: relative;
@@ -30,53 +28,59 @@ body {
     user-select: none;
   }
   
-  /* Set all odd list items to a different color (zebra-stripes) */
   ul li:nth-child(odd) {
     background: #f9f9f9;
   }
   
-  /* Darker background-color on hover */
   ul li:hover {
     background: #ddd;
   }
   
-  /* When clicked on, add a background color and strike out text */
   ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
   }
   
-  /* Style the close button */
   .close {
     position: absolute;
-    right: 0;
+    right: 1px;
     top: 0;
     bottom: 0;
     padding: 12px 16px 12px 16px;
   }
   
   .close:hover {
-    background-color: #f44336;
+    background-color: #f80e0e;
     color: white;
   }
-  /* Style complete button */
+
+  .finished {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    bottom: 0;
+    padding: 12px 16px 12px 16px;
+  }
   
-  /* Style the header */
+  .finished:hover {
+    background-color: #22a807;
+    color: white;
+  }
+ 
   .header {
-    background-color: #f44336;
+    background-color: #001f3f;
     padding: 30px 40px;
     color: white;
     text-align: center;
   }
   
-  /* Clear floats after the header */
   .header:after {
     content: "";
     display: table;
     clear: both;
   }
-  /* Style Drop down */
+
   select {
     height: 7%;
     width: 50%;
@@ -90,7 +94,7 @@ body {
     border: 2px solid#555;
     box-shadow: 0px 0px 1px 5000px   rgba(88, 88, 88, 0.9);
   }
-  /* Style the input */
+
   input {
     border: none;
     width: 75%;
@@ -100,7 +104,6 @@ body {
     outline: none;
   }
   
-  /* Style the "Add" button */
   .addTaskBtn {
     padding: 10px;
     width: 25%;
