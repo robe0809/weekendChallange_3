@@ -81,7 +81,7 @@ body {
     clear: both;
   }
 
-  select {
+  /* select {
     height: 7%;
     width: 50%;
     margin: auto;
@@ -93,7 +93,7 @@ body {
     background-color: #CBDBD7;
     border: 2px solid#555;
     box-shadow: 0px 0px 1px 5000px   rgba(88, 88, 88, 0.9);
-  }
+  } */
 
   input {
     border: none;
